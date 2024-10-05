@@ -1,0 +1,174 @@
+@font-face {
+    font-family: Poppins-Reg;
+    src: url(Poppins-Reg.ttf);
+}
+@font-face {
+    font-family: Poppins-ExtraLight;
+    src: url(Poppins-ExtraLight.ttf);
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fff6e8;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins-Reg;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    
+    margin-top: 0px;
+    height: 4.5rem;
+    width: 100vw;
+    background-color: #fff6e8;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000;
+    margin-left: 30px;
+}
+
+.logo {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faculty-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.nav-links {
+    margin-right: 40px;
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-links li a:hover {
+    color: #1b1c1c;
+    border-bottom: 2px solid #000;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a:hover::before {
+    width: 80%;
+}
+
+.sign-button {
+    position: relative; /* This allows for manual adjustments */
+    background-color:#0f0f0f;
+    border: 1.5px solid #0f0f0f;
+    border-radius: 5px;
+    color: #fff6e8;
+    padding: 0.6rem 0.8rem;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 150px; /* Set your desired margin here */
+}
+
+.sign-button:hover {
+    background-color: #2a2b2b;
+    transition: all ease-in-out 350ms;
+}
+.credentials{
+    position: absolute;
+    display: flex;
+    margin-left: 130px;
+    margin-top: 150px;
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+.securely{
+    position: absolute;
+    display: flex;
+    margin-left: 130px;
+    margin-top: 360px;
+    font-size: 20px;
+    font-weight: thin;
+    font-family: Poppins-ExtraLight;
+}
+.sign-inn-button{
+    display: flex;
+    position: absolute; /* This allows for manual adjustments */
+    background-color:#0f0f0f;
+    border: 1.5px solid #0f0f0f;
+    border-radius: 5px;
+    color: #fff6e8;
+    padding: 0.6rem 0.8rem;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 130px;
+    margin-top: 480px;
+}
+.sign-inn-button:hover {
+    background-color: #2a2b2b;
+    transition: all ease-in-out 350ms;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .logo-container {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .faculty-title {
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin-bottom: 15px;
+    }
+
+    .login-button {
+        margin: 1rem auto;
+        font-size: 22px;
+    }
+}
