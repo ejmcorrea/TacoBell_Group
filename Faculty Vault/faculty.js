@@ -12,3 +12,8 @@ hamburger.addEventListener('click', ()=>{
     //Hamburger Animation
     hamburger.classList.toggle("toggle");
 });
+function hideAllText() {
+    document.querySelectorAll('.text').forEach(function(el) {
+        el.classList.remove('visible');
+    });
+}

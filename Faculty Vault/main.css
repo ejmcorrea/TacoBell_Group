@@ -6,28 +6,39 @@
     font-family: Poppins-ExtraLight;
     src: url(Poppins-ExtraLight.ttf);
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     overflow-x: hidden;
     background-color: #fff6e8;
     margin: 0;
-    padding: 0;
+    padding:0;
     font-family: Poppins-Reg;
     font-weight: bold;
     letter-spacing: 1px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 5000px;
+    display: flex;
+    scroll-behavior: smooth;
+    
 }
 
+
 nav {
-    
-    margin-top: 0px;
     height: 4.5rem;
     width: 100vw;
     background-color: #fff6e8;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-    display: flex; 
+    display: flex;
     align-items: center;
-    position: absolute;
-    z-index: 10;
+    position: fixed; /* Keep nav fixed at the top */
+    top: 0;  /* Start at top */
+    z-index: 100;
+    transition: top 0.3s ease-in-out; 
 }
 
 .logo-container {
@@ -57,7 +68,9 @@ nav {
     margin-left: 30px;
 }
 
+
 .nav-links {
+    position: sticky;
     margin-right: 40px;
     display: flex;
     list-style: none;
@@ -65,18 +78,32 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 100px;
+
 }
 
 .nav-links li a {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
+    cursor: pointer;
 }
+
+
 
 .nav-links li a:hover {
     color: #1b1c1c;
     border-bottom: 2px solid #000;
+}
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transition: width 0.3s;
 }
 
 .nav-links li {
@@ -87,22 +114,22 @@ nav {
     width: 80%;
 }
 
+
 .sign-button {
     position: relative; /* This allows for manual adjustments */
-    background-color: #444242;
-    border: 1.5px solid #444242;
+    background-color:#0f0f0f;
+    border: 1.5px solid #0f0f0f;
     border-radius: 5px;
     color: #fff6e8;
     padding: 0.6rem 0.8rem;
-    font-family: Poppins-Reg;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    margin-right: 100px; /* Set your desired margin here */
+    margin-right: 150px; /* Set your desired margin here */
 }
 
 .sign-button:hover {
-    background-color: #000000;
+    background-color: #2a2b2b;
     transition: all ease-in-out 350ms;
 }
 .credentials{
@@ -126,12 +153,11 @@ nav {
 .sign-inn-button{
     display: flex;
     position: absolute; /* This allows for manual adjustments */
-    background-color:#343232;
-    border: 1.5px solid #343232;
+    background-color:#0f0f0f;
+    border: 1.5px solid #0f0f0f;
     border-radius: 5px;
     color: #fff6e8;
     padding: 0.6rem 0.8rem;
-    font-family: Poppins-Reg;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -139,9 +165,102 @@ nav {
     margin-top: 480px;
 }
 .sign-inn-button:hover {
-    background-color: #000000;
+    background-color: #2a2b2b;
     transition: all ease-in-out 350ms;
 }
+
+.navbar {
+    transition: top 0.3s;
+    border: 3px solid black; /* Small border */
+    border-radius: 20px;   
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    width: 40%; /* Fixed width */
+    background-color: #fff6e8; /* Light brown background */
+    border-radius: 50px;
+    margin-top: 800px ; /* Centering the navbar */
+    margin-left: 500px;
+    top: 90px;
+        transition: top 0.3s;
+       
+  }
+
+  
+  .nav-items {
+    margin-right:28px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* Stack items vertically */
+    align-items: center;
+    gap: 40px; /* Reduced gap for compact look */
+  }
+  
+  .nav-items li {
+    display: block;
+  }
+  
+  .nav-items a {
+    color: #000;
+    text-decoration: none;
+     /* Smaller padding */
+    font-family: Poppins-ExtraLight;
+    font-size: 18px;
+    width: 100%; 
+    text-align: center; 
+  }
+  
+  .nav-items a.active {
+    font-weight: bold;
+  }
+  
+  .nav-items a:hover {
+    text-decoration: underline;
+  }
+  .features{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 800px;
+    top: 30px;
+}
+  
+ 
+  .store{
+    position: absolute;
+    display: flex;
+    margin-left: 300px;
+    margin-top: 900px;
+    top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;;
+}
+.store1{
+    position: absolute;
+    display: flex;
+    margin-left: 400px;
+    margin-top: 1050px;
+    top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;;
+}
+.store2{
+    position: absolute;
+    display: flex;
+    margin-left: 360px;
+    margin-top: 1250px;
+    font-size: 30px;
+    font-family: Poppins-ExtraLight;
+    justify-content: center;
+    align-items: center;;
+    color: #6d6d6c;
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
